@@ -1,0 +1,10 @@
+@media (max-width: 768px) {
+    .row-fields {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .input-box {
+        width: 100%;
+    }
+}

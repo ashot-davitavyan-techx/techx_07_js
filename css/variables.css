@@ -1,0 +1,17 @@
+:root {
+    --main-text: rgb(44, 51, 69);
+    --secondary-text: rgb(87, 100, 126);
+    --dark-red: rgb(255, 58, 60);
+    --light-red: rgb(255, 237, 237);
+    --dark-blue: rgb(46, 105, 255);
+    --light-blue: rgb(241, 245, 255);
+    --table-color: rgb(195, 202, 216);
+    --background-color: rgb(230, 230, 230);
+    --form-background-color: white;
+    --green-color: rgb(24, 189, 91);
+
+    --font-main: "Inter", sans-serif;
+
+    --padding-general: 3vw;
+    --gap-general: 3vw;
+}

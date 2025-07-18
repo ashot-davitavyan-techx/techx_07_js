@@ -30,10 +30,9 @@ body {
 .header {
     padding: var(--padding-general);
     width: 100%;
-    border-bottom: 1px solid var(--background-color);
 }
 
-.header-container h1{
+.header-container h1 {
     font-size: max(3vw, 20px);
 }
 
@@ -47,19 +46,32 @@ body {
 .form-group {
     display: flex;
     flex-direction: column;
-    gap:10px;
+    gap: max(1.5vw, 10px);
+    padding: 10px;
+    border-radius: 5px;
 }
+
 
 .custom-input {
     padding: 5px;
     border-radius: 5px;
     border: 1px solid var(--background-color);
-    height:max(3vw, 27px);
+    height: max(3.3vw, 27px);
     background-color: white;
+    font-size: max(1.3vw, 12px);
+}
+
+.custom-textarea {
+    height: 12vw;
 }
 
 .custom-input:focus {
     outline: none;
+}
+
+.custom-select {
+    color: var(--secondary-text);
+    font-size: max(1.3vw, 12px);
 }
 
 .input-fields {
@@ -71,10 +83,14 @@ body {
     display: flex;
     flex-direction: column;
     width: 47%;
-    gap:10px;
+    gap: 10px;
 }
 
-.group-heading{
+.box-long {
+    width: 100%;
+}
+
+.group-heading {
     font-size: max(2vw, 16px);
 }
 
@@ -83,3 +99,97 @@ body {
     color: var(--secondary-text);
 }
 
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: max(0.5vw, 5px);
+}
+
+.custom-checkbox {
+    width: max(1.5vw, 15px);
+    height: max(1.5vw, 15px);
+}
+
+.table-container {
+    width: 100%;
+}
+
+.table-input {
+    width: 100%;
+    padding: 20px 10px;
+    border-radius: 0px;
+}
+
+.custom-table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.th-left {
+    border-top-left-radius: 5px;
+}
+
+.th-right {
+    border-top-right-radius: 5px;
+}
+
+.td-top {
+    border-top-left-radius: 5px;
+}
+
+.td-bottom {
+    border-bottom-left-radius: 5px;
+}
+
+.custom-th {
+    background-color: var(--light-blue);
+    border: 1px solid var(--table-color);
+    padding: 12px;
+    font-size: max(1.3vw, 12px);
+}
+
+.custom-td {
+    background-color: var(--light-blue);
+    border: 1px solid var(--table-color);
+    padding: 10px min(4vw, 20px) 10px 10px;
+    font-size: max(1.3vw, 12px);
+}
+
+.styled-button {
+    background-color: var(--green-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: min(20vw, 1000px);
+    height: min(6vw, 100px);
+    font-size: max(2vw, 16px);
+}
+
+.custom-label-checkbox {
+    font-size: max(1.4vw, 12px);
+}
+
+.custom-hr {
+    height: 1px;
+    background-color: var(--background-color);
+    border: none;
+}
+
+.exclamation-mark {
+    color: red;
+    display: inline-block;
+    background-color: white;
+    border-radius: 50%;
+    text-align: center;
+    padding: 0 5px;
+}
+
+.error-message {
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: var(--dark-red);
+    font-size: max(1.3vw, 12px);
+    width: fit-content;
+    display: none;
+}

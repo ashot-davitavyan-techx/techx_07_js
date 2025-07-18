@@ -1,4 +1,13 @@
 @media (max-width: 768px) {
+    body {
+        padding: 0;
+        display: block;
+    }
+
+    .page-container {
+        width: 100%;
+    }
+
     .row-fields {
         flex-direction: column;
         gap: 15px;

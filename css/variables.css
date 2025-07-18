@@ -14,4 +14,6 @@
 
     --padding-general: 3vw;
     --gap-general: 3vw;
+    --input-height: max(3vw, 27px);
+    --input-height-large: 9vw;
 }

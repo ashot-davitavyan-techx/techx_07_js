@@ -26,15 +26,8 @@ export class ErrorHandler {
 
     static handleErrors(errors) {
         let groups = this.groupErrors(errors);
-        for (const group of groups){
-            for (const error of group){
-                console.log(error.toString());
-
-            }
+        for (let i = 0; i < groups.length; i++) {
+            UIErrorPresenter.showValidationErrors(groups[i], i == 0);
         }
-    }
-
-    static handleGroup(errorGroup) {
-
     }
 }

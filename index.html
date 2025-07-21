@@ -88,12 +88,12 @@
                         </div>
                     </div>
                     <hr class="custom-hr">
-                    <div class="form-group">
+                    <div class="form-group source-group">
                         <div class="group-heading-container">
                             <h2 class="group-heading">How did you hear about us? <span class="red-asterisk">*</span></h2>
                         </div>
                         <div class="input-box">
-                            <select class="custom-input custom-select" name="source">
+                            <select class="custom-input custom-select" name="source" id="source">
                                 <option value="">Please Select</option>
                                 <option value="newspaper">Newspaper</option>
                                 <option value="internet">Internet</option>
@@ -105,12 +105,12 @@
                             <p><span class="exclamation-mark">!</span><span class="error-message"> This field is required.</span></p>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group other-group" id="other-source">
                         <div class="group-heading-container">
                             <h2 class="group-heading">Other <span class="red-asterisk">*</span></h2>
                         </div>
                         <div class="input-box">
-                            <input class="custom-input" type="text" name="other">
+                            <input class="custom-input" type="text" name="other-source">
                         </div>
                         <div class="error-message-box">
                             <p><span class="exclamation-mark">!</span><span class="error-message"> This field is required.</span></p>
@@ -138,19 +138,19 @@
                         </div>
                         <div class="input-box">
                             <div class="checkbox-option">
-                                <input class="custom-checkbox" type="checkbox" id="yes" name="recommendation" value="yes">
+                                <input class="custom-checkbox" type="radio" id="yes" name="recommendation" value="yes">
                                 <label class="custom-label-checkbox" for="yes">Yes</label>
                             </div>
                         </div>
                         <div class="input-box">
                             <div class="checkbox-option">
-                                <input class="custom-checkbox" type="checkbox" id="maybe" name="recommendation" value="maybe">
+                                <input class="custom-checkbox" type="radio" id="maybe" name="recommendation" value="maybe">
                                 <label class="custom-label-checkbox" for="maybe">Maybe</label>
                             </div>
                         </div>
                         <div class="input-box">
                             <div class="checkbox-option">
-                                <input class="custom-checkbox" type="checkbox" id="no" name="recommendation" value="no">
+                                <input class="custom-checkbox" type="radio" id="no" name="recommendation" value="no">
                                 <label class="custom-label-checkbox" for="no">No</label>
                             </div>
                         </div>
@@ -172,15 +172,15 @@
                                 <tbody>
                                     <tr>
                                         <td class="custom-td td-top">1</td>
-                                        <td><input class="custom-input table-input" type="text"></td>
-                                        <td><input class="custom-input table-input" type="text"></td>
-                                        <td><input class="custom-input table-input" type="text"></td>
+                                        <td><input class="custom-input table-input" name="reference-name-1" type="text"></td>
+                                        <td><input class="custom-input table-input" name="reference-address-1" type="text"></td>
+                                        <td><input class="custom-input table-input" name="reference-number-1" type="number"></td>
                                     </tr>
                                     <tr>
                                         <td class="custom-td td-bottom">2</td>
-                                        <td><input class="custom-input table-input" type="text"></td>
-                                        <td><input class="custom-input table-input" type="text"></td>
-                                        <td><input class="custom-input table-input" type="text"></td>
+                                        <td><input class="custom-input table-input" name="reference-name-2" type="text"></td>
+                                        <td><input class="custom-input table-input" name="reference-address-2" type="text"></td>
+                                        <td><input class="custom-input table-input" name="reference-number-2" type="number"></td>
                                     </tr>
                                 </tbody>
                             </table>

@@ -8,28 +8,39 @@ export class Validator {
 
     errorList = [];
 
-    validateNameField(field, value, fieldGroupName) {
-        const nameRegx = /^[A-Za-zÀ-ÖØ-öø-ÿ'-]+$/;
-
-        if (value.trim().length < 3) {
+    validateField(field, value, fieldGroupName) {
+        if (field != "email" && value.trim().length < 3) {
             throw new ValidationError(Validator.ErrorTypes.EMPTY_FIELD, "Empty Field", field, fieldGroupName);
-        } else if (!nameRegx.test(value)) {
-            throw new ValidationError(Validator.ErrorTypes.INVALID_FIELD, "Invalid Field", field, fieldGroupName);
+        }
+        switch (field) {
+            case "first_name":
+            case "last_name":
+                this.validateNameField(field, value);
+                break;
+            case "email":
+                this.validateEmailField(field, value);
+            case "phone-number":
+                this.validatePhoneNumber(field, value);
         }
     }
 
-    validateAddress(field, value, fieldGroupName) {
-        // const addressRegex = //maybe add one
-        if (value.trim().length < 3)
-            throw new ValidationError(Validator.ErrorTypes.EMPTY_FIELD, "Empty Field", field, fieldGroupName);
+    validateNameField(field, value) {
+        const nameRegx = /^[A-Za-zÀ-ÖØ-öø-ÿ'-]+$/;
+
+        if (!nameRegx.test(value)) {
+            throw new ValidationError(Validator.ErrorTypes.INVALID_FIELD, "Invalid Field", field, ".name-group");
+        }
     }
 
-    validatePhoneNumber(field, value, fieldGroupName) {
-        if (value.trim().length < 3)
-            throw new ValidationError(Validator.ErrorTypes.EMPTY_FIELD, "Empty Field", field, fieldGroupName);
+    validateEmailField(field, value) {
+        const emailRegx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+        
+        if (!emailRegx.test(value) && value.length != 0) {
+            throw new ValidationError(Validator.ErrorTypes.INVALID_FIELD, "Invalid Email", field, ".email-group");
+        }
     }
 
-    validateEmail(field, value, fieldGroupName) {
+    validatePhoneNumber(field, value) {
         return;
     }
 
@@ -39,19 +50,27 @@ export class Validator {
                 switch (key) {
                     case "first_name":
                     case "last_name":
-                        this.validateNameField(key, value, ".name-group");
+                        this.validateField(key, value, ".name-group");
                         break;
                     case "street_address":
                     case "city":
                     case "state_province":
                     case "postal_zip":
-                        this.validateAddress(key, value, ".address-group");
+                        this.validateField(key, value, ".address-group");
                         break;
                     case "phone_number":
-                        this.validatePhoneNumber(key, value, ".phone-number-group");
+                        this.validateField(key, value, ".phone-number-group");
                         break;
                     case "email":
-                        this.validateEmail(key, value, ".email-group");
+                        this.validateField(key, value, ".email-group");
+                        break;
+                    case "source":
+                        this.validateField(key, value, ".source-group");
+                        break;
+                    case "other-source":
+                        this.validateField(key, value, ".other-group");
+                        break;
+                    default:
                         break;
                 }
             } catch (error) {

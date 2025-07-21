@@ -9,13 +9,12 @@ export class UIErrorPresenter {
 
     static showValidationError(error, fieldGroup){
         const inputField = fieldGroup.querySelector(`[name="${error.fieldName}"]`);
-        inputField.style.borderColor = this.getRootColor('--dark-red');
+        inputField.classList.add("is-invalid-field");
     }
     
     static showValidationErrors(errors, toScroll){
-        // debugger;
         const fieldGroup = document.querySelector(errors[0].fieldGroupName);
-        fieldGroup.style.backgroundColor = this.getRootColor('--light-red');
+        fieldGroup.classList.add("is-invalid-group");
         const errorMessageBox = fieldGroup.querySelector(".error-message-box");
         const errorMessage = errorMessageBox.querySelector(".error-message");
         errorMessageBox.style.display = "block";

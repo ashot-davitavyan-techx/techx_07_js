@@ -193,3 +193,15 @@ body {
     width: fit-content;
     display: none;
 }
+
+.other-group {
+    display: none;
+}
+
+.is-invalid-field {
+    border-color: var(--dark-red);
+}
+
+.is-invalid-group {
+    background-color: var(--light-red);
+}

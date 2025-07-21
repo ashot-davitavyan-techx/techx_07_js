@@ -39,18 +39,22 @@ function clearErrors(){
 const form = document.getElementById("form");
 const sourceSelect = document.getElementById("source");
 const otherOption = document.getElementById("other-source");
+const buttonClose = document.getElementById("button-close");
+const successMessage = document.getElementById("success-message");
 
 form.addEventListener('submit', function (event) {
     event.preventDefault();
     clearErrors();
-
+    
     const formData = new FormData(form);
     const validator = new Validator();
     const errorList = validator.validate(formData);
-
+    
     ErrorHandler.handleErrors(errorList);
+    debugger;
     if (errorList.length == 0){
         logFormData(formData);
+        successMessage.style.display = "flex";
     }
     const referencedPeople = storeReferencedPeople(formData);
 });
@@ -63,3 +67,6 @@ sourceSelect.addEventListener("change", function() {
     }
 });
 
+buttonClose.addEventListener("click", function(){
+    successMessage.style.display = "none";
+});

@@ -44,7 +44,17 @@ export class Validator {
         return;
     }
 
+    validateSource(source, other){
+        if (source == ""){
+            throw new ValidationError(Validator.ErrorTypes.EMPTY_FIELD, "Empty Field", ".source", ".source-group");
+        } else if (source == "other" && other.trim().length < 1){
+            throw new ValidationError(Validator.ErrorTypes.EMPTY_FIELD, "Empty Field", ".other-source", ".other-group");
+        }
+    }
+
     validate(formData) {
+        let source;
+
         for (const [key, value] of formData.entries()) {
             try {
                 switch (key) {
@@ -65,10 +75,10 @@ export class Validator {
                         this.validateField(key, value, ".email-group");
                         break;
                     case "source":
-                        this.validateField(key, value, ".source-group");
+                        source = value;
                         break;
                     case "other-source":
-                        this.validateField(key, value, ".other-group");
+                        this.validateSource(source, value);
                         break;
                     default:
                         break;

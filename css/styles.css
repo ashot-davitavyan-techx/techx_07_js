@@ -23,17 +23,13 @@ body {
     min-width: 320px;
 }
 
-.red-asterisk {
-    color: var(--dark-red);
-}
-
 .header {
     padding: var(--padding-general);
     width: 100%;
 }
 
-.header-container h1 {
-    font-size: max(3vw, 20px);
+.red-asterisk {
+    color: var(--dark-red);
 }
 
 .form-container {
@@ -51,7 +47,6 @@ body {
     border-radius: 5px;
 }
 
-
 .custom-input {
     padding: 5px;
     border-radius: 5px;
@@ -61,12 +56,16 @@ body {
     font-size: max(1.3vw, 12px);
 }
 
-.custom-textarea {
-    height: 12vw;
-}
-
 .custom-input:focus {
     outline: none;
+}
+
+.header-container h1 {
+    font-size: max(3vw, 20px);
+}
+
+.custom-textarea {
+    height: 12vw;
 }
 
 .custom-select {
@@ -212,7 +211,7 @@ body {
     gap: 10px;
     border: 1px solid black;
     background-color: white;
-    flex-direction:column;
+    flex-direction: column;
     align-items: center;
     position: fixed;
     z-index: 5;
@@ -238,9 +237,9 @@ body {
 
 .button-close {
     position: fixed;
-    font-size:20px;
-    top:2px;
-    right:5px;
+    font-size: 20px;
+    top: 2px;
+    right: 5px;
     background-color: white;
     border: none;
 }

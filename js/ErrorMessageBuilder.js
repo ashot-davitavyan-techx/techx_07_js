@@ -3,9 +3,15 @@ export class ErrorMessageBuilder {
         let message = " ";
         let invalid_fields;
         let empty_fields;
-        // for (let i = 0; i < errors.length; i++) {
 
-        // }
-        return (" This field is required");
+        switch (errors[0].fieldName) {
+            case "email":
+                return " Enter a valid Email";
+                break;
+            case "phone-number":
+                return " Enter a valid phone number";
+            default:
+                return " This field is required";
+        }
     }
 }

@@ -13,22 +13,14 @@ export class Validator {
             throw new ValidationError(Validator.ErrorTypes.EMPTY_FIELD, "Empty Field", field, fieldGroupName);
         }
         switch (field) {
-            case "first_name":
-            case "last_name":
-                this.validateNameField(field, value);
-                break;
             case "email":
                 this.validateEmailField(field, value);
+                break;
             case "phone-number":
                 this.validatePhoneNumber(field, value);
-        }
-    }
-
-    validateNameField(field, value) {
-        const nameRegx = /^[A-Za-zÀ-ÖØ-öø-ÿ'-]+$/;
-
-        if (!nameRegx.test(value)) {
-            throw new ValidationError(Validator.ErrorTypes.INVALID_FIELD, "Invalid Field", field, ".name-group");
+                break;
+            default:
+                break;
         }
     }
 
@@ -41,6 +33,9 @@ export class Validator {
     }
 
     validatePhoneNumber(field, value) {
+        const phoneNumberRegx = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/
+        if (!phoneNumberRegx.test(value))
+            throw new ValidationError(Validator.ErrorTypes.INVALID_FIELD, "Invalid Phone Number", field, ".phone-number-group")
         return;
     }
 

@@ -1,26 +1,26 @@
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: var(--font-main);
     font-weight: 500;
+    margin: 0;
+    padding: 0;
 }
 
 body {
+    background-color: var(--background-color);
+    color: var(--main-text);
     display: flex;
     justify-content: center;
-    color: var(--main-text);
     min-height: 100vh;
-    background-color: var(--background-color);
     padding: 50px 0;
 }
 
 .page-container {
+    background-color: var(--form-background-color);
     display: flex;
     flex-direction: column;
-    background-color: var(--form-background-color);
-    width: 70%;
     min-width: 320px;
+    width: 70%;
 }
 
 .header {
@@ -35,25 +35,25 @@ body {
 .form-container {
     display: flex;
     flex-direction: column;
-    padding: var(--padding-general);
     gap: var(--padding-general);
+    padding: var(--padding-general);
 }
 
 .form-group {
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     gap: max(1.5vw, 10px);
     padding: 10px;
-    border-radius: 5px;
 }
 
 .custom-input {
-    padding: 5px;
+    background-color: white;
     border-radius: 5px;
     border: 1px solid var(--background-color);
-    height: max(3.3vw, 27px);
-    background-color: white;
     font-size: max(1.3vw, 12px);
+    height: max(3.3vw, 27px);
+    padding: 5px;
 }
 
 .custom-input:focus {
@@ -81,8 +81,8 @@ body {
 .input-box {
     display: flex;
     flex-direction: column;
-    width: 47%;
     gap: 10px;
+    width: 47%;
 }
 
 .box-long {
@@ -99,14 +99,14 @@ body {
 }
 
 .checkbox-option {
-    display: flex;
     align-items: center;
+    display: flex;
     gap: max(0.5vw, 5px);
 }
 
 .custom-checkbox {
-    width: max(1.5vw, 15px);
     height: max(1.5vw, 15px);
+    width: max(1.5vw, 15px);
 }
 
 .table-container {
@@ -114,9 +114,9 @@ body {
 }
 
 .table-input {
-    width: 100%;
-    padding: 20px 10px;
     border-radius: 0px;
+    padding: 20px 10px;
+    width: 100%;
 }
 
 .custom-table {
@@ -143,25 +143,25 @@ body {
 .custom-th {
     background-color: var(--light-blue);
     border: 1px solid var(--table-color);
-    padding: 12px;
     font-size: max(1.3vw, 12px);
+    padding: 12px;
 }
 
 .custom-td {
     background-color: var(--light-blue);
     border: 1px solid var(--table-color);
-    padding: 10px min(4vw, 20px) 10px 10px;
     font-size: max(1.3vw, 12px);
+    padding: 10px min(4vw, 20px) 10px 10px;
 }
 
 .styled-button {
     background-color: var(--green-color);
-    color: white;
-    border: none;
     border-radius: 5px;
-    width: min(20vw, 1000px);
-    height: min(6vw, 100px);
+    border: none;
+    color: white;
     font-size: max(2vw, 16px);
+    height: min(6vw, 100px);
+    width: min(20vw, 1000px);
 }
 
 .custom-label-checkbox {
@@ -169,28 +169,28 @@ body {
 }
 
 .custom-hr {
-    height: 1px;
     background-color: var(--background-color);
     border: none;
+    height: 1px;
 }
 
 .exclamation-mark {
-    color: red;
-    display: inline-block;
     background-color: white;
     border-radius: 50%;
-    text-align: center;
+    color: red;
+    display: inline-block;
     padding: 0 max(0.5vw, 5px);
+    text-align: center;
 }
 
 .error-message-box {
-    color: white;
-    border-radius: 5px;
-    padding: 5px;
     background-color: var(--dark-red);
-    font-size: max(1.3vw, 12px);
-    width: fit-content;
+    border-radius: 5px;
+    color: white;
     display: none;
+    font-size: max(1.3vw, 12px);
+    padding: 5px;
+    width: fit-content;
 }
 
 .other-group {
@@ -206,22 +206,22 @@ body {
 }
 
 .success-message-box {
-    display: none;
-    padding: 10px;
-    gap: 10px;
-    border: 1px solid black;
-    background-color: white;
-    flex-direction: column;
     align-items: center;
-    position: fixed;
-    z-index: 5;
+    background-color: white;
+    border: 1px solid black;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
     left: 50%;
+    padding: 10px;
+    position: fixed;
     transform: translate(-50%, 0);
+    z-index: 5;
 }
 
 .success-text {
-    font-weight: 1000;
     font-size: 3vw;
+    font-weight: 1000;
 }
 
 .checkmark {
@@ -231,15 +231,15 @@ body {
 }
 
 .checkmark-img {
-    width: 5vw;
     height: auto;
+    width: 5vw;
 }
 
 .button-close {
-    position: fixed;
-    font-size: 20px;
-    top: 2px;
-    right: 5px;
     background-color: white;
     border: none;
+    font-size: 20px;
+    position: fixed;
+    right: 5px;
+    top: 2px;
 }

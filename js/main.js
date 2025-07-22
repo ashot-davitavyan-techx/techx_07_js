@@ -45,15 +45,11 @@ const successMessage = document.getElementById("success-message");
 form.addEventListener('submit', function (event) {
     event.preventDefault();
     clearErrors();
-
-    debugger;
     
     const formData = new FormData(form);
     const validator = new Validator();
     const errorList = validator.validate(formData);
     
-    debugger;
-
     ErrorHandler.handleErrors(errorList);
     if (errorList.length == 0){
         logFormData(formData);

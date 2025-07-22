@@ -13,7 +13,6 @@ export class UIErrorPresenter {
     }
 
     static showValidationErrors(errors, toScroll) {
-        debugger;
         const fieldGroup = document.querySelector(errors[0].fieldGroupName);
         fieldGroup.classList.add("is-invalid-group");
         const errorMessageBox = fieldGroup.querySelector(".error-message-box");

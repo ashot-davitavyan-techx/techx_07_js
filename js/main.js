@@ -58,6 +58,7 @@ form.addEventListener('submit', function (event) {
     if (errorList.length == 0){
         logFormData(formData);
         successMessage.style.display = "flex";
+        form.reset();
     }
     const referencedPeople = storeReferencedPeople(formData);
 });

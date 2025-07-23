@@ -1,0 +1,19 @@
+@media (max-width: 768px) {
+    body {
+        display: block;
+        padding: 0;
+    }
+
+    .page-container {
+        width: 100%;
+    }
+
+    .row-fields {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .input-box {
+        width: 100%;
+    }
+}

@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box;
+    font-family: var(--font-main);
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--main-text);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 50px 0;
+}
+
+.page-container {
+    background-color: var(--form-background-color);
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    width: 70%;
+}
+
+.header {
+    padding: var(--padding-general);
+    width: 100%;
+}
+
+.red-asterisk {
+    color: var(--dark-red);
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding-general);
+    padding: var(--padding-general);
+}
+
+.form-group {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: max(1.5vw, 10px);
+    padding: 10px;
+}
+
+.custom-input {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid var(--background-color);
+    font-size: max(1.3vw, 12px);
+    height: max(3.3vw, 27px);
+    padding: 5px;
+}
+
+.custom-input:focus {
+    outline: none;
+}
+
+.header-container h1 {
+    font-size: max(3vw, 20px);
+}
+
+.custom-textarea {
+    height: 12vw;
+}
+
+.custom-select {
+    color: var(--secondary-text);
+    font-size: max(1.3vw, 12px);
+}
+
+.input-fields {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 47%;
+}
+
+.box-long {
+    width: 100%;
+}
+
+.group-heading {
+    font-size: max(2vw, 16px);
+}
+
+.custom-label {
+    font-size: max(1.3vw, 12px);
+    color: var(--secondary-text);
+}
+
+.checkbox-option {
+    align-items: center;
+    display: flex;
+    gap: max(0.5vw, 5px);
+}
+
+.custom-checkbox {
+    height: max(1.5vw, 15px);
+    width: max(1.5vw, 15px);
+}
+
+.table-container {
+    width: 100%;
+}
+
+.table-input {
+    border-radius: 0px;
+    padding: 20px 10px;
+    width: 100%;
+}
+
+.custom-table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.th-left {
+    border-top-left-radius: 5px;
+}
+
+.th-right {
+    border-top-right-radius: 5px;
+}
+
+.td-top {
+    border-top-left-radius: 5px;
+}
+
+.td-bottom {
+    border-bottom-left-radius: 5px;
+}
+
+.custom-th {
+    background-color: var(--light-blue);
+    border: 1px solid var(--table-color);
+    font-size: max(1.3vw, 12px);
+    padding: 12px;
+}
+
+.custom-td {
+    background-color: var(--light-blue);
+    border: 1px solid var(--table-color);
+    font-size: max(1.3vw, 12px);
+    padding: 10px min(4vw, 20px) 10px 10px;
+}
+
+.styled-button {
+    background-color: var(--green-color);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-size: max(2vw, 16px);
+    height: min(6vw, 100px);
+    width: min(20vw, 1000px);
+}
+
+.custom-label-checkbox {
+    font-size: max(1.4vw, 12px);
+}
+
+.custom-hr {
+    background-color: var(--background-color);
+    border: none;
+    height: 1px;
+}
+
+.exclamation-mark {
+    background-color: white;
+    border-radius: 50%;
+    color: red;
+    display: inline-block;
+    padding: 0 max(0.5vw, 5px);
+    text-align: center;
+}
+
+.error-message-box {
+    background-color: var(--dark-red);
+    border-radius: 5px;
+    color: white;
+    display: none;
+    font-size: max(1.3vw, 12px);
+    padding: 5px;
+    width: fit-content;
+}
+
+.other-group {
+    display: none;
+}
+
+.is-invalid-field {
+    border-color: var(--dark-red);
+}
+
+.is-invalid-group {
+    background-color: var(--light-red);
+}
+
+.success-message-box {
+    align-items: center;
+    background-color: white;
+    border: 1px solid black;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    left: 50%;
+    padding: 10px;
+    position: fixed;
+    transform: translate(-50%, 0);
+    z-index: 5;
+}
+
+.success-text {
+    font-size: 3vw;
+    font-weight: 1000;
+}
+
+.checkmark {
+    border-radius: 50%;
+    border: 1px solid green;
+    padding: 10px 10px 7px 10px;
+}
+
+.checkmark-img {
+    height: auto;
+    width: 5vw;
+}
+
+.button-close {
+    background-color: white;
+    border: none;
+    font-size: 20px;
+    position: fixed;
+    right: 5px;
+    top: 2px;
+}

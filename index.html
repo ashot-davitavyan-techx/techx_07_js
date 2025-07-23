@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Inter">
+    <title>Form</title>
+</head>
+<body>
+    <div class="page-container">
+        <header class="header">
+            <div class="header-container">
+                <h1>Customer Details:</h1>
+            </div>
+        </header>
+        <main>
+            <div class="success-message-box" id="success-message">
+                <div class="checkmark">
+                    <img class="checkmark-img" src="./css/images/checkmark.png" alt="checkmark">
+                </div>
+                <div>
+                    <h3 class="success-text">Thank You!</h3>
+                </div>
+                <div>
+                    <p>Your submission has been received.</p>
+                </div>
+                <button class="button-close" id="button-close">X</button>
+            </div>
+            <form id="form">
+                <hr class="custom-hr">
+                <div class="form-container">
+                    <div class="form-group name-group">
+                        <div class="group-heading-container">
+                            <h2 class="group-heading">Full Name <span class="red-asterisk">*</span></h2>
+                        </div>
+                        <div class="input-fields row-fields">
+                            <div class="input-box">
+                                <input class="custom-input" type="text" name="first_name">
+                                <label class="custom-label" for="first_name">First Name</label>
+                            </div>
+                            <div class="input-box">
+                                <input class="custom-input" type="text" name="last_name">
+                                <label class="custom-label" for="last_name">Last Name</label>
+                            </div>
+                        </div>
+                        <div class="error-message-box">
+                            <p><span class="exclamation-mark">!</span><span class="error-message"> This field is required.</span></p>
+                        </div>
+                    </div>
+                    <div class="form-group address-group">
+                        <div class="group-heading-container">
+                            <h2 class="group-heading">Address <span class="red-asterisk">*</span></h2>
+                        </div>
+                        <div class="input-box box-long">
+                                <input class="custom-input" type="text" name="street_address">
+                                <label class="custom-label" for="street_address">Street Address</label>
+                        </div>
+                        <div class="input-box box-long">
+                                <input class="custom-input" type="text" name="street_address_2">
+                                <label class="custom-label" for="street_address_2">Street Address Line 2</label>
+                        </div>
+                        <div class="input-fields row-fields">
+                            <div class="input-box">
+                                <input class="custom-input" type="text" name="city">
+                                <label class="custom-label" for="city">City</label>
+                            </div>
+                            <div class="input-box">
+                                <input class="custom-input" type="text" name="state_province">
+                                <label class="custom-label" for="state_province">State/Province</label>
+                            </div>
+                        </div>
+                        <div class="postal-zip input-box box-long">
+                                <input class="custom-input" type="text" name="postal_zip">
+                                <label class="custom-label" for="postal_zip">Postal/Zip Code</label>                            
+                        </div>
+                        <div class="error-message-box">
+                            <p><span class="exclamation-mark">!</span><span class="error-message"> This field is required.</span></p>
+                        </div>
+                    </div>
+                    <div class="form-group phone-number-group">
+                        <div class="group-heading-container">
+                            <h2 class="group-heading">Phone Number <span class="red-asterisk">*</span></h2>
+                        </div>
+                        <div class="input-box">
+                            <input class="custom-input" type="number" name="phone_number">
+                        </div>
+                        <div class="error-message-box">
+                            <p><span class="exclamation-mark">!</span><span class="error-message"> This field is required.</span></p>
+                        </div>
+                    </div>
+                    <div class="form-group email-group">
+                        <div class="group-heading-container">
+                            <h2 class="group-heading">E-mail</h2>
+                        </div>
+                        <div class="input-box">
+                            <input class="custom-input" type="email" name="email">
+                        </div>
+                        <div class="error-message-box">
+                            <p><span class="exclamation-mark">!</span><span class="error-message"> Enter a Valid Email.</span></p>
+                        </div>
+                    </div>
+                    <hr class="custom-hr">
+                    <div class="form-group source-group">
+                        <div class="group-heading-container">
+                            <h2 class="group-heading">How did you hear about us? <span class="red-asterisk">*</span></h2>
+                        </div>
+                        <div class="input-box">
+                            <select class="custom-input custom-select" name="source" id="source">
+                                <option value="">Please Select</option>
+                                <option value="newspaper">Newspaper</option>
+                                <option value="internet">Internet</option>
+                                <option value="magazine">Magazine</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="error-message-box">
+                            <p><span class="exclamation-mark">!</span><span class="error-message"> This field is required.</span></p>
+                        </div>
+                    </div>
+                    <div class="form-group other-group" id="other-source">
+                        <div class="group-heading-container">
+                            <h2 class="group-heading">Other <span class="red-asterisk">*</span></h2>
+                        </div>
+                        <div class="input-box">
+                            <input class="custom-input" type="text" name="other-source">
+                        </div>
+                        <div class="error-message-box">
+                            <p><span class="exclamation-mark">!</span><span class="error-message"> This field is required.</span></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="group-heading-container">
+                            <h2 class="group-heading">Feedback about us:</h2>
+                        </div>
+                        <div class="input-box box-long">
+                            <textarea class="custom-input custom-textarea" name="feedback"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="group-heading-container">
+                            <h2 class="group-heading">Suggestions if any for further improvement:</h2>
+                        </div>
+                        <div class="input-box box-long">
+                            <textarea class="custom-input custom-textarea" name="suggestions"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="group-heading-container">
+                            <h2 class="group-heading"> Will you be willing to recommend us?</h2>
+                        </div>
+                        <div class="input-box">
+                            <div class="checkbox-option">
+                                <input class="custom-checkbox" type="radio" id="yes" name="recommendation" value="yes">
+                                <label class="custom-label-checkbox" for="yes">Yes</label>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <div class="checkbox-option">
+                                <input class="custom-checkbox" type="radio" id="maybe" name="recommendation" value="maybe">
+                                <label class="custom-label-checkbox" for="maybe">Maybe</label>
+                            </div>
+                        </div>
+                        <div class="input-box">
+                            <div class="checkbox-option">
+                                <input class="custom-checkbox" type="radio" id="no" name="recommendation" value="no">
+                                <label class="custom-label-checkbox" for="no">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="group-heading-container">
+                            <h2 class="group-heading">Please give reference of any two people whom you feel:</h2>
+                        </div>
+                        <div class="input-box table-container">
+                            <table class="custom-table">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th class="custom-th th-left">Full Name</th>
+                                        <th class="custom-th">Address</th>
+                                        <th class="custom-th th-right">Contact Number</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="custom-td td-top">1</td>
+                                        <td><input class="custom-input table-input" name="reference-name-1" type="text"></td>
+                                        <td><input class="custom-input table-input" name="reference-address-1" type="text"></td>
+                                        <td><input class="custom-input table-input" name="reference-number-1" type="number"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="custom-td td-bottom">2</td>
+                                        <td><input class="custom-input table-input" name="reference-name-2" type="text"></td>
+                                        <td><input class="custom-input table-input" name="reference-address-2" type="text"></td>
+                                        <td><input class="custom-input table-input" name="reference-number-2" type="number"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <hr class="custom-hr">
+                <div class="form-container">
+                    <div class="form-group submit">
+                        <div class="button-container">
+                            <button class="styled-button" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </main>
+        <script type="module" src="js/main.js"></script>
+    </div>
+</body>
+</html>
